@@ -1,0 +1,6 @@
+<div>
+    <p>Name:<%= exercise.name %></p>
+    <p>Sets:<%= exercise.set %></p>
+    <p>Rep:<%= exercise.rep %></p>
+    <%= link_to "Delete Exercise" , practise_exercise_path(@practise, exercise.id) , method: :delete, data: {confirm: "Are you sure ?" } %>
+</div>

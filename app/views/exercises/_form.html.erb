@@ -1,0 +1,7 @@
+<%= simple_form_for ([@practise, @practise.exercises.build]) do |f| %>
+    <%= f.input :name, input_html: { class: "form-control" } %>
+    <%= f.input :set, input_html: { class: "form-control" } %>
+    <%= f.input :rep, input_html: { class: "form-control" } %>
+    <br>
+    <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>    

@@ -1,0 +1,17 @@
+<h1>WorkOut</h1>
+   <h2>Date:<%= @practise.date.strftime("%A %B %d") %></h2>
+    <p>Log:<%= @practise.workout %></p>
+    <p>Mood:<%= @practise.mood %></p>
+    <p>Duration:<%= @practise.length %></p>
+
+<div class="exercises">
+    <% if !@practise.exercises.blank? %>
+        <p>Exercises - </p>
+    <% end %>    
+    <%= render @practise.exercises %>
+    <h3>Add an Exercise</h3>
+    <%= render "exercises/form" %>
+</div>
+<%= link_to "Back" , root_path %> |
+<%= link_to "Edit", edit_practise_path(@practise) %> |
+<%= link_to "Delete", practise_path(@practise) , method: :delete , data: {confirm: "Are you sure ?"} %>

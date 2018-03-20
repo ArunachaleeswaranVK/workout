@@ -1,0 +1,7 @@
+<%= simple_form_for @practise , :html => { :class => 'form-horizontal' } ,html: { multipart: true } do |f| %>
+    <%= f.input :date , input_html: {class: "form-control" } %>
+    <%= f.input :workout , input_html: {class: "form-control" } %>
+    <%= f.input :mood , input_html: {class: "form-control" } %>
+    <%= f.input :length , input_html: {class: "form-control" } %>
+    <%= f.button :submit , class: "btn btn-default" %>
+<% end %>
